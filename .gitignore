@@ -1,0 +1,6 @@
+*.user
+*.vcproj
+*.o
+Makefile*
+*.exe
+build*
