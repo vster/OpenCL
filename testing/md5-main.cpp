@@ -16,7 +16,7 @@ This file is in the public domain
 #include <fstream>
 #include <opencl/md5.h>
 #include <opencl/encoder.h>
-#include <opencl/filters.h>
+// #include <opencl/filters.h>
 
 int main(int argc, char* argv[])
    {

@@ -4,7 +4,7 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-    ../sha1-main.cpp
+    ../haval-main.cpp
 
 INCLUDEPATH += \
     ../../include
