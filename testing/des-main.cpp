@@ -30,14 +30,19 @@ int main(void)
     byte datad[BS];
     int i;
 
-    for (i = 0; i < KL; i++)
-        key[i] = i;
+    // for (i = 0; i < KL; i++)
+    //    key[i] = i;
+    memcpy(key,kzu1,KL);
 
+    cout << "DES" << endl;
+    cout << "KL = " << KL << endl;
+    cout << "BS = " << BS << endl;
     cout << "Key" << endl;
     output_hex(key, KL);
 
-    for (i = 0; i < BS; i++)
-        data[i] = i + 0x30;
+    // for (i = 0; i < BS; i++)
+    //     data[i] = i + 0x30;
+    memcpy(data,to1,BS);
 
     cout << "Initial data" << endl;
     output_hex(data, BS);
@@ -48,6 +53,11 @@ int main(void)
 
     cout << "Encrypted data" << endl;
     output_hex(datac, BS);
+
+    if (memcmp(datac,tc1,BS))
+        cout << "Encrypt test failed." << endl;
+    else
+        cout << "Encrypt test is OK." << endl;
 
     d1.decrypt(datac, datad);
 
